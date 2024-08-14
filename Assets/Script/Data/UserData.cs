@@ -7,25 +7,33 @@ public class BackPackData
 }
 public class GameData
 {
-
+    public int fruitScore;
+    public int balloonScore;
+    public int basketballScore;
 }
-
 public class UserData
 {
-    public static UserData instance;
-    public static UserData Instance
+    public int token;
+}
+
+public class Data
+{
+    public static Data instance;
+    public static Data Instance
     {
         get
         {
             if (instance == null)
             {
-                instance = new UserData();
+                instance = new Data();
             }
             return instance;
         }
     }
 
     public BackPackData backPackData = new BackPackData();
+    public GameData gameData = new GameData();
+    public UserData userData = new UserData();
 
 
 }

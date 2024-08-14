@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
+
 using UI;
 using UnityEditor;
 using UnityEngine;
 
-public class Tools
+public class UITools
 {
+   
     [MenuItem("Tools/UI/¹Ø±Õ")]
     public static void Pop()
     {

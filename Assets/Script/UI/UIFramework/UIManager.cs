@@ -48,7 +48,7 @@ namespace UI
                 {
                     dicPath.Add(item.name, $"Prefabs/UIPrefab/{item.name}");
                 }
-                Debug.Log(item.name);
+                //Debug.Log(item.name);
             }
         }
         void InitUILayer()
@@ -116,7 +116,7 @@ namespace UI
                 if (dicPath.ContainsKey(panelType))
                 {
                     path = dicPath[panelType];
-                    Debug.Log(path);
+                    //Debug.Log(path);
                 }
                 else
                 {
