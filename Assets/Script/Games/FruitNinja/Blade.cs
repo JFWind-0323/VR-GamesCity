@@ -10,9 +10,10 @@ public class Blade : MonoBehaviour
     public float bladeForce = 1;
     public int score = 0;
     [SerializeField] TMP_Text scoreText;
+   
 
     public int Combo =0;
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         
         if(other.gameObject.CompareTag("Fruit"))
@@ -32,8 +33,8 @@ public class Blade : MonoBehaviour
         GameObject slicedFruit = Instantiate(slicedFruitPrefab, fruit.transform.position, fruit.transform.rotation);
         slicedFruit.GetComponent<Rigidbody>().AddForce(fruit.transform.up * bladeForce, ForceMode.Impulse);
 
-        if(fruit!=null)
-        Destroy(fruit);
+        
+        fruit.SetActive(false);
         Destroy(slicedFruit, 0.2f);
         Combo++;
 
@@ -47,6 +48,7 @@ public class Blade : MonoBehaviour
         }
         else
         {
+            Debug.Log("1");
             score += fruitScore;
             scoreText.text = "Score:" + score;
             scoreText.color = Color.black;
@@ -55,9 +57,9 @@ public class Blade : MonoBehaviour
     void BombExplode(GameObject bomb)
     {
         Combo = 0;
-        Destroy(bomb);
+        bomb.SetActive(false);
         if (score > 0)
-            score = score - 5;
+            score = score - 1;
         scoreText.text = "Score:" + score;
         scoreText.color = Color.red;
     }

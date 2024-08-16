@@ -6,15 +6,15 @@ using UnityEngine;
 public class BasketCheck : MonoBehaviour
 {
     public BasketType basketType;
-    [SerializeField] TMP_Text scoreText;
+    public BasketShowScore showScore;
+    
     public int score = 0;
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("BasketBall"))
+        if (other.gameObject.CompareTag("Basketball"))
         {
             int count = GetScoreForBasket();
-            score += count;
-            scoreText.text = "Score" + score;
+            showScore.GetAndShowScore(count);
         }
     }
     public int GetScoreForBasket()

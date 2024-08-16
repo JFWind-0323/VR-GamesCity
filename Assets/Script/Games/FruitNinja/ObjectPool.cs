@@ -38,6 +38,8 @@ public class ObjectPool : MonoBehaviour
         if (pooledObjects.Count > 0)
         {
             GameObject obj = pooledObjects.Dequeue(); // 从池中取出一个对象  
+            Debug.Log(pooledObjects.Count);
+
             obj.SetActive(true); // 激活对象  
             obj.transform.position = GetRandomPositionInsideCollider(spawnArea); // 设置随机位置  
             pooledObjects.Enqueue(obj); // 将对象放回池尾，以便下次使用

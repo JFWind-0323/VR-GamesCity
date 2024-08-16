@@ -1,0 +1,4 @@
+repository "VR-GamesCity@jtmfxydklp@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

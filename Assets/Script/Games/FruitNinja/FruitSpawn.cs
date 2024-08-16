@@ -12,7 +12,7 @@ public class FruitSpawn : MonoBehaviour
     {
         ObjectPool = GameObject.FindObjectOfType<ObjectPool>();
     }
-    void Start()
+    void OnEnable()
     {
         float randomX = Random.Range(-30f, 30f);
         float randomZ = Random.Range(-30f, 30f);
