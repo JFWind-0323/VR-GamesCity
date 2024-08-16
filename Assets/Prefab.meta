@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Arts.meta
+guid: 5cb6503339f8edc458ebb354775c6320
+========
 guid: 8a0decfcdb83c9d4d945d47b4cc69ce9
+>>>>>>>> mmx:Assets/Prefab.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

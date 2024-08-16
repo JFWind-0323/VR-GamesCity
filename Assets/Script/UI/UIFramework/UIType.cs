@@ -6,6 +6,7 @@ namespace UI
         SettingsPanel,
         BackpackPanel,
         GameIntroducePanel,
-        GameOverPanel
+        GameOverPanel,
+        MenuPanel
     }
 }

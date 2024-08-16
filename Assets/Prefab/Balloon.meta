@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Arts/fruits.meta
+guid: 5dd66029cf506c3498931a1e47d2e3f3
+========
 guid: 48d7358faa6cc1b49ac99da1268d5d9a
+>>>>>>>> mmx:Assets/Prefab/Balloon.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
