@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIAnchorManager : MonoSingle<UIAnchorManager>
+public class UIAnchorHelper : MonoSingle<UIAnchorHelper>
 {
     public void FillTheCanvas(RectTransform tf)
     {
