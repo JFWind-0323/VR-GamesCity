@@ -70,7 +70,7 @@ namespace UI
                 GameObject layer = new GameObject(dicLayerName[item]);
                 RectTransform tf = layer.AddComponent<RectTransform>();
                 tf.SetParent(canvasTf);
-                UIAnchorManager.Instance.FillTheCanvas(tf);
+                UIAnchorHelper.Instance.FillTheCanvas(tf);
                 dicLayer.Add(item, layer.transform);
             }
         }
