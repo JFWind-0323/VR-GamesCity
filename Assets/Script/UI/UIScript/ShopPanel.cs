@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ShopPanel : BasePanel
 {
+
     string goodsPrefabPath = "Prefabs/GoodsPrefab";
     string infoPath = "CSV/GoodsInfo";
     TextAsset infoAsset;
