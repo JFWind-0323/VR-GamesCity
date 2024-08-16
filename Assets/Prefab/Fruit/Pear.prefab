@@ -112,7 +112,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0253db4d118284d4fb75e7fdf375b66d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7806291496760068568}
+      addedObject: {fileID: 3027407674553606749}
   m_SourcePrefab: {fileID: 100100000, guid: 0253db4d118284d4fb75e7fdf375b66d, type: 3}
 --- !u!1 &2337317533439101360 stripped
 GameObject:
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea8d95d4a3265d46bed03bff26aa394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 6
-  minForce: 5
+  maxForce: 7
+  minForce: 6
 --- !u!54 &-6935120708324077074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,8 +174,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7806291496760068568
-MeshCollider:
+--- !u!135 &3027407674553606749
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,10 +189,9 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Radius: 2.0432258
+  m_Center: {x: 0.96716094, y: -0.094446965, z: -0.10448354}

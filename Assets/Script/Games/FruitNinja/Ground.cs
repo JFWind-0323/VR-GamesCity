@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    public void OnCollisionEnter(Collision fruit)
+    public void OnColliderEnter(Collider fruit)
     {
 
         if (fruit.gameObject.CompareTag("Fruit"))
