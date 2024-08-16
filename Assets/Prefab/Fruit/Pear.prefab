@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0253db4d118284d4fb75e7fdf375b66d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.35
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0253db4d118284d4fb75e7fdf375b66d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.35
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0253db4d118284d4fb75e7fdf375b66d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.35
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0253db4d118284d4fb75e7fdf375b66d,
         type: 3}
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea8d95d4a3265d46bed03bff26aa394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 7
-  minForce: 6
+  maxForce: 6
+  minForce: 4
 --- !u!54 &-6935120708324077074
 Rigidbody:
   m_ObjectHideFlags: 0

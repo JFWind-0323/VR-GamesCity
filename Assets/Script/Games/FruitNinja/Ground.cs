@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    public void OnColliderEnter(Collider fruit)
+    public void OnTriggerEnter(Collider fruit)
     {
 
-        if (fruit.gameObject.CompareTag("Fruit"))
+        if (fruit.gameObject.CompareTag("Fruit")&&fruit.gameObject.CompareTag("Half"))
         {
 
             fruit.gameObject.SetActive(false);
