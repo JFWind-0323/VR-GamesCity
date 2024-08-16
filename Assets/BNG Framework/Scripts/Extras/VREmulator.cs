@@ -64,8 +64,6 @@ namespace BNG {
         [Tooltip("Unity Input Action used to mimic having your thumb near a button")]
         public InputActionReference RightThumbNearAction;
 
-        public InputActionReference Menu;
-
         float mouseRotationX;
         float mouseRotationY;
 
@@ -251,10 +249,6 @@ namespace BNG {
 
             if(RightThumbNearAction) {
                 InputBridge.Instance.RightThumbNear = RightThumbNearAction.action.ReadValue<float>() == 1;
-            }
-            if (Menu)
-            {
-                InputBridge.Instance.StartButton = Menu;
             }
         }
 

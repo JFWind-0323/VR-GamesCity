@@ -170,7 +170,7 @@ namespace BNG {
         [Tooltip("Thumbstick Y must be greater than this amount to be considered valid")]
         public float ThumbstickDeadzoneY = 0.001f;
 
-        #endregion
+#endregion
 
         #region Raw Inputs
 
