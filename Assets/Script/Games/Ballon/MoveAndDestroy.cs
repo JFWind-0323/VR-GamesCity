@@ -3,8 +3,8 @@ using UnityEngine;
 public class MoveAndDestroy : MonoBehaviour
 {
     public Vector3 direction = Vector3.forward; 
-    public float speed = 5f;
-    public float destroyDistance = 100f;
+    public float speed = 0.01f;
+    public float destroyDistance = 10f;
 
     private Vector3 startPosition;
     private ObjectPool ObjectPool;

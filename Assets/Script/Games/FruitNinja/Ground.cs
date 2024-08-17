@@ -7,7 +7,7 @@ public class Ground : MonoBehaviour
     public void OnTriggerEnter(Collider fruit)
     {
 
-        if (fruit.gameObject.CompareTag("Fruit")&&fruit.gameObject.CompareTag("Half"))
+        if (fruit.gameObject.CompareTag("Fruit"))
         {
 
             fruit.gameObject.SetActive(false);

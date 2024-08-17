@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 1}
-  speed: 5
+  speed: 0.5
   destroyDistance: 20
 --- !u!114 &-128922671830757428
 MonoBehaviour:
@@ -137,8 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
-  SpawnOnDeath: {fileID: 9165342806373082577, guid: a789d0b9ce34ff842880e59ef8261779,
-    type: 3}
+  SpawnOnDeath: {fileID: 9165342806373082577, guid: a789d0b9ce34ff842880e59ef8261779, type: 3}
   ActivateGameObjectsOnDeath: []
   DeactivateGameObjectsOnDeath: []
   DeactivateCollidersOnDeath: []
@@ -151,7 +150,7 @@ MonoBehaviour:
   onDamaged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 9866b7b771d67ad4a9bd509681e10e92, type: 2}
+      - m_Target: {fileID: 11400000, guid: 7ca34e52c6904ed4f9e50fed64b850f9, type: 2}
         m_TargetAssemblyTypeName: BalloonScore, Assembly-CSharp
         m_MethodName: GetScore
         m_Mode: 1

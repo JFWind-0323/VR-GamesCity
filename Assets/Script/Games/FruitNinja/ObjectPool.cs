@@ -7,7 +7,7 @@ public class ObjectPool : MonoBehaviour
 
     public Transform spawnArea; // 指定的Collider范围  
     public Queue<GameObject> pooledObjects = new Queue<GameObject>(); // 对象池  
-    private const int initialPoolSize = 20; // 初始池大小  
+    private const int initialPoolSize = 100; // 初始池大小  
 
     public void PaseOrStartGame(int GameType)
     {
