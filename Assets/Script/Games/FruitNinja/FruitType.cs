@@ -1,7 +1,11 @@
 public enum FruitType
 {
     Apple,
-    Banana,
-   Watermellon,
+    Pear,
+   Orange,
+   Coconut,
+   Icosphere,
+   Lemon,
+   Houlonggou,
      Bomb,
 }
