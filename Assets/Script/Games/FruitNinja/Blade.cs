@@ -81,12 +81,15 @@ public class Blade : MonoBehaviour
 
         foreach(Rigidbody slice in slices)
         {
+            slice.transform.parent = null;
             slice.velocity = fruit.GetComponent<Rigidbody>().velocity;
             slice.AddForceAtPosition(direction * force, gameObject.transform.position, ForceMode.Impulse);
+          
+            Destroy(slice.gameObject, 1f);
         }
 
         fruit.SetActive(false);
-        Destroy(slicedFruit, 1f);
+      
         Combo++;
 
       int fruitScore=  GetScoreForFruit(fruit.GetComponent<FruitScore>().type);
