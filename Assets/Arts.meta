@@ -1,14 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Arts.meta
 guid: 20677c1c3c5595d4ea87fc2aa1ed95db
-========
-<<<<<<< HEAD
-guid: a32d15aa4b96dc242a8a9b06e4842d3a
->>>>>>>> mmx:Assets/Arts/fruits/apple.meta
-=======
-guid: 8a0decfcdb83c9d4d945d47b4cc69ce9
->>>>>>>> mmx:Assets/Prefab.meta
->>>>>>> mmx
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

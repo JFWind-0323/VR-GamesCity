@@ -3,7 +3,6 @@
     "com.unity.burst": {
       "version": "1.8.8",
       "depth": 1,
-<<<<<<< HEAD
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
@@ -13,12 +12,8 @@
     "com.unity.collab-proxy": {
       "version": "2.4.4",
       "depth": 0,
-=======
->>>>>>> mmx
       "source": "registry",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.1"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.cn"
     },
     "com.unity.editorcoroutines": {
