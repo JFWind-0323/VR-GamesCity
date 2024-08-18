@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 22981a1774193544d9495f8ceaab9aa3
+=======
+<<<<<<<< HEAD:Assets/Script/Data.meta
+guid: 22981a1774193544d9495f8ceaab9aa3
+========
+guid: 33b705063bbee2a47965715ae36d37f5
+>>>>>>>> mmx:Assets/Script/Games.meta
+>>>>>>> mmx
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

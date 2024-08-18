@@ -1,5 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/xqq.unity.meta
 guid: b1cb732613a85e14a95d8dd37924176e
+========
+<<<<<<< HEAD
+guid: 319dafa5c80f29f428dc1e0d03f04177
+>>>>>>>> mmx:Assets/Samples/XR Interaction Toolkit/2.4.3/Starter Assets/DemoScene.unity.meta
+=======
+guid: b1cb4503d168fd94ead674e625f9ca08
+>>>>>>>> mmx:Assets/Scenes/GamesTest.unity.meta
+>>>>>>> mmx
 DefaultImporter:
   externalObjects: {}
   userData: 

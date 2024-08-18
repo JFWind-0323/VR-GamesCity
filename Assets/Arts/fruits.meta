@@ -1,5 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Arts/fruits.meta
 guid: b0e88146ee1beb446a6dfbb54de7654b
+========
+<<<<<<< HEAD
+guid: c9a6a6a1fff473c4ba8581cefec8ca07
+>>>>>>>> mmx:Assets/Arts/fruits/apple/Apple.fbm.meta
+=======
+guid: 48d7358faa6cc1b49ac99da1268d5d9a
+>>>>>>>> mmx:Assets/Prefab/Balloon.meta
+>>>>>>> mmx
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
