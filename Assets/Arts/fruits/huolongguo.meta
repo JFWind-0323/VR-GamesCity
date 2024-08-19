@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Arts/fruits/huolongguo.meta
 guid: 70b4a63a273dfb042a11f524dc7cfe62
 folderAsset: yes
 DefaultImporter:
+========
+guid: 42afe40ff94ffa74390042f694a5aced
+NativeFormatImporter:
+>>>>>>>> origin/mmx1:Assets/Fonts/VonwaonBitmap-16px.asset.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

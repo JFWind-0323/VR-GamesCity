@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class Blade : MonoBehaviour
 {
@@ -12,9 +13,14 @@ public class Blade : MonoBehaviour
     public float force=0;
     Vector3 position = Vector3.zero;
     Transform rightHandAnchor;
-   public  GameObject Apple;
-   public  GameObject Pear;
-   public  GameObject Watermellon;
+    public  GameObject Apple;
+    public  GameObject Pear;
+    public GameObject Icosphere;
+    public  GameObject Coconut;
+    public GameObject Lemon;
+    public GameObject Houlonggou;
+    public GameObject Orange;
+        
 
     [SerializeField] TMP_Text scoreText;
    
@@ -72,8 +78,8 @@ public class Blade : MonoBehaviour
       {
             
            childTransform.position = fruit.transform.position;
-            Transform child1 = childTransforms[1]; // 假设第一个子物体
-            Transform child2 = childTransforms[2]; // 假设第二个子物体
+            Transform child1 = childTransforms[0]; // 假设第一个子物体
+            Transform child2 = childTransforms[1]; // 假设第二个子物体
             
         }
 
@@ -81,12 +87,15 @@ public class Blade : MonoBehaviour
 
         foreach(Rigidbody slice in slices)
         {
+            slice.transform.parent = null;
             slice.velocity = fruit.GetComponent<Rigidbody>().velocity;
             slice.AddForceAtPosition(direction * force, gameObject.transform.position, ForceMode.Impulse);
+          
+            Destroy(slice.gameObject, 1f);
         }
 
         fruit.SetActive(false);
-        Destroy(slicedFruit, 1f);
+      
         Combo++;
 
       int fruitScore=  GetScoreForFruit(fruit.GetComponent<FruitScore>().type);
@@ -120,12 +129,21 @@ public class Blade : MonoBehaviour
         {
             case FruitType.Apple:
                 return Apple;
-            case FruitType.Banana:
+            case FruitType.Pear:
                 return Pear;
-            case FruitType.Watermellon:
-                return Watermellon;
+            case FruitType.Icosphere:
+                return Icosphere;
+            case FruitType.Coconut:
+                return Coconut;
+            case FruitType.Lemon:
+                return Lemon;
+    
+            case FruitType.Houlonggou:
+                return Houlonggou;
+            case FruitType.Orange:
+                return Orange;
             default:
-                return Apple;
+                return null;
 
         }
 
@@ -135,12 +153,20 @@ public class Blade : MonoBehaviour
         switch (type)
         {
         case FruitType.Apple:
-        return 2;
-            case FruitType.Banana:
-            return 3;
-        case FruitType.Watermellon:
+            return 2;
+        case FruitType.Coconut:
             return 1;
-            default:
+        case FruitType.Lemon:
+            return 3;
+        case FruitType.Icosphere:
+            return 1;
+        case FruitType.Pear:
+            return 2;
+        case FruitType.Houlonggou:
+            return 3;
+        case FruitType.Orange:
+            return 5;
+        default:
           return 0;
 
         }
