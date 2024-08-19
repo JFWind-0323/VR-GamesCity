@@ -11,6 +11,7 @@ public class ShopPanel : BasePanel
     string goodsBtnPfbPath = "Prefabs/ButtonPrefab/GoodsBtn";
     string goodPfbPathBase = "Prefabs/GoodsPrefab/";
     string infoPath = "CSV/GoodsInfo";
+    string spritePathBase = "Sprites/GoodsSprite/";
     TextAsset infoAsset;
     string[] infoText;
     public GameObject goodsBtnPfb;
@@ -59,7 +60,13 @@ public class ShopPanel : BasePanel
             GameObject goodsBtn = Instantiate(goodsBtnPfb, parent);
             goodsBtn.name = name;
             Button btn = goodsBtn.GetComponent<Button>();
+            Image image = btn.image;
+
+            string spritePath = spritePathBase + name;
             btn.onClick.AddListener(() => GetGoods(id));
+            btn.onClick.AddListener(() => btn.enabled = false);
+
+            image.sprite = Resources.Load<Sprite>(spritePath);
 
             switch (typeID)
             {
@@ -75,8 +82,8 @@ public class ShopPanel : BasePanel
                     Debug.LogError("请检查表格是否有误");
                     break;
             }
-           
-           
+
+
         }
         uiSkinDic.PrintDic();
         selectionDic.PrintDic();
