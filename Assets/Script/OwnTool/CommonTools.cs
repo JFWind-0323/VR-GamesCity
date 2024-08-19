@@ -1,25 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace OwnTool
 {
-    public class CommonTools
+    public static class CommonTools
     {
-        public static CommonTools instance;
 
-        public static CommonTools Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new CommonTools();
-                }
-                return instance;
-            }
-        }
-        public void PrintDic<TKey, TValue>(Dictionary<TKey, TValue> dic)
+        public static void PrintDic<TKey, TValue>(this Dictionary<TKey, TValue> dic)
         {
             if (dic != null)
             {
@@ -27,7 +16,7 @@ namespace OwnTool
                 {
                     Debug.Log(dic[key].ToString());
                 }
-                Debug.Log(dic.Count);
+                //Debug.Log(dic.Count);
             }
             else
             {
@@ -35,8 +24,24 @@ namespace OwnTool
             }
         }
 
-
+        public static Dictionary<Tkey, TValue> InitDic<Tkey, TValue>(this Dictionary<Tkey, TValue> dic)
+        {
+            if (dic == null)
+            {
+                dic = new Dictionary<Tkey, TValue>();
+            }
+            dic.Clear();
+            return dic;
+        }
+        public static void DestroyChilds(this Transform parent)
+        {
+            for (int i = parent.childCount; i > 0; i--)
+            {
+                GameObject.Destroy(parent.GetChild(i-1).gameObject);
+            }
+        }
     }
 
 }
+
 

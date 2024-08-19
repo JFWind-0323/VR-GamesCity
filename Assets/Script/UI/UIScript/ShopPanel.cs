@@ -3,54 +3,83 @@ using System.Collections.Generic;
 using OwnTool;
 using UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopPanel : BasePanel
 {
 
-    string goodsPrefabPath = "Prefabs/GoodsPrefab";
+    string goodsBtnPfbPath = "Prefabs/ButtonPrefab/GoodsBtn";
+    string goodPfbPathBase = "Prefabs/GoodsPrefab/";
     string infoPath = "CSV/GoodsInfo";
     TextAsset infoAsset;
     string[] infoText;
-    public GameObject goodBtnPfb;
-    public GameObject[] goods;
-    public Dictionary<GameObject, GoodsInfo> goodsDic;
+    public GameObject goodsBtnPfb;
+    public Dictionary<GameObject, GoodsInfo> uiSkinDic;
+    public Dictionary<GameObject, GoodsInfo> selectionDic;
     public Dictionary<int, string> goodsPathDic;
 
-    private void Awake()
-    {
-        goodBtnPfb = Resources.Load<GameObject>(goodsPrefabPath);
-        infoAsset = Resources.Load<TextAsset>(infoPath);
-        infoText = infoAsset.text.Split("\n");
-        InitGoodsDic();
-        InitGoodPathDic();
-    }
-
+    Transform uiSkinParent;
+    Transform selectionParent;
 
     public override void OnEnter()
     {
         base.OnEnter();
+        goodsBtnPfb = Resources.Load<GameObject>(goodsBtnPfbPath);
+        infoAsset = Resources.Load<TextAsset>(infoPath);
+        infoText = infoAsset.text.Split("\n");
+
+        uiSkinParent = transform.GetChild(0).GetChild(0).transform;
+        selectionParent = transform.GetChild(1).GetChild(0).transform;
+
+        InitGoodsDics();
+        InitGoodPathDic();
 
 
     }
-    void InitGoodsDic()
+    void InitGoodsDics()
     {
-        if (goodsDic == null)
-        {
-            goodsDic = new Dictionary<GameObject, GoodsInfo>();
-        }
-        goodsDic.Clear();
+        uiSkinDic = uiSkinDic.InitDic();
+        selectionDic = selectionDic.InitDic();
 
-        if (goods.Length == 0)
-        {
-            Debug.LogWarning($"路径：{goodsPrefabPath}下没有预制体");
-        }
-        for (int i = 0; i < goods.Length; i++)
+        for (int i = 0; i < infoText.Length - 2; i++)
         {
             string[] row = infoText[i + 1].Split(",");
+
             int id = int.Parse(row[0].Trim());
+            if (CheckIfBeSold(id))
+                continue;
+
             string name = row[1].Trim();
-            goodsDic.Add(goods[i], new GoodsInfo(id, name));
+            int price = int.Parse(row[2].Trim());
+            int typeID = int.Parse(row[3].Trim());
+
+
+
+            Transform parent = transform.GetChild(typeID).GetChild(0).transform;
+            GameObject goodsBtn = Instantiate(goodsBtnPfb, parent);
+            goodsBtn.name = name;
+            Button btn = goodsBtn.GetComponent<Button>();
+            btn.onClick.AddListener(() => GetGoods(id));
+
+            switch (typeID)
+            {
+                case 0:
+                    uiSkinDic.Add(goodsBtn, new GoodsInfo(id, name, price, GoodsType.UISkin));
+                    break;
+                case 1:
+
+                    selectionDic.Add(goodsBtn, new GoodsInfo(id, name, price, GoodsType.Selection));
+                    break;
+                default:
+                    goodsBtn = null;
+                    Debug.LogError("请检查表格是否有误");
+                    break;
+            }
+           
+           
         }
+        uiSkinDic.PrintDic();
+        selectionDic.PrintDic();
     }
     void InitGoodPathDic()
     {
@@ -58,17 +87,48 @@ public class ShopPanel : BasePanel
         {
             goodsPathDic = new Dictionary<int, string>();
         }
-        goodsPathDic.Clear();
-        foreach (GameObject go in goodsDic.Keys)
+        goodsPathDic = goodsPathDic.InitDic();
+        foreach (var goods in uiSkinDic.Keys)
         {
-            int id = goodsDic[go].id;
-            string path = $"{goodsPrefabPath}/{go.name}";
+            int id = uiSkinDic[goods].id;
+            string path = goodPfbPathBase + uiSkinDic[goods].name;
             goodsPathDic.Add(id, path);
-
         }
-        CommonTools.Instance.PrintDic(goodsPathDic);
-
+        foreach (var goods in selectionDic.Keys)
+        {
+            int id = selectionDic[goods].id;
+            string path = goodPfbPathBase + selectionDic[goods].name;
+            goodsPathDic.Add(id, path);
+        }
     }
 
-  
+    public void GetGoods(int id)
+    {
+        Data.Instance.backPackData.goodsDicKvp.Add(new Kvp<int, string> { key = id, value = goodsPathDic[id] });
+        Debug.Log(goodsPathDic[id]);
+    }
+
+    public override void OnExit()
+    {
+        Debug.Log(uiSkinParent);
+        uiSkinParent.DestroyChilds();
+        selectionParent.DestroyChilds();
+
+        base.OnExit();
+    }
+
+
+    bool CheckIfBeSold(int id)
+    {
+        foreach (var kvp in Data.Instance.backPackData.goodsDicKvp)
+        {
+
+            if (id == kvp.key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
