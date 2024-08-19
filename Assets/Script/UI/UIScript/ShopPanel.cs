@@ -11,13 +11,14 @@ public class ShopPanel : BasePanel
     string infoPath = "CSV/GoodsInfo";
     TextAsset infoAsset;
     string[] infoText;
-    public GameObject[] goodsPrefabs;
+    public GameObject goodBtnPfb;
+    public GameObject[] goods;
     public Dictionary<GameObject, GoodsInfo> goodsDic;
     public Dictionary<int, string> goodsPathDic;
 
     private void Awake()
     {
-        goodsPrefabs = Resources.LoadAll<GameObject>(goodsPrefabPath);
+        goodBtnPfb = Resources.Load<GameObject>(goodsPrefabPath);
         infoAsset = Resources.Load<TextAsset>(infoPath);
         infoText = infoAsset.text.Split("\n");
         InitGoodsDic();
@@ -39,16 +40,16 @@ public class ShopPanel : BasePanel
         }
         goodsDic.Clear();
 
-        if (goodsPrefabs.Length == 0)
+        if (goods.Length == 0)
         {
             Debug.LogWarning($"路径：{goodsPrefabPath}下没有预制体");
         }
-        for (int i = 0; i < goodsPrefabs.Length; i++)
+        for (int i = 0; i < goods.Length; i++)
         {
             string[] row = infoText[i + 1].Split(",");
             int id = int.Parse(row[0].Trim());
             string name = row[1].Trim();
-            goodsDic.Add(goodsPrefabs[i], new GoodsInfo(id, name));
+            goodsDic.Add(goods[i], new GoodsInfo(id, name));
         }
     }
     void InitGoodPathDic()

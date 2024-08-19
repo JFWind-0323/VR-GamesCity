@@ -26,6 +26,7 @@ namespace BNG {
         public void ToggleActive(InputAction.CallbackContext context) {
             if (!IsActive)
             {
+                Debug.Log(UIType.MenuPanel);
                 UIManager.Instance.PushPanel(UIType.MenuPanel);
                 CanvasTrack.Instance.Track();
                 IsActive = true;

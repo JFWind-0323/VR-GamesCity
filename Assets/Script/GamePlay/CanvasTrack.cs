@@ -7,7 +7,7 @@ using UnityEngine;
 public class CanvasTrack : MonoBehaviour
 {
     public static CanvasTrack Instance;
-    [SerializeField] Transform player;
+    Transform player;
 
     [Header("ÓëÍæ¼ÒµÄ¾àÀë")]
     [Range(0.5f, 1.5f)] public float distance = 1;
@@ -15,6 +15,7 @@ public class CanvasTrack : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        player = GameObject.Find("PlayerController").GetComponent<Transform>();
     }
     public void Track()
     {
