@@ -118,7 +118,7 @@ namespace BNG {
             characterController = GetComponentInChildren<CharacterController>();
             smoothLocomotion = GetComponentInChildren<SmoothLocomotion>();
 
-            mainCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+            mainCamera = GameObject.FindGameObjectWithTag("Camera1").transform;
 
             if (characterController) {
                 _initialPosition = characterController.transform.position;
