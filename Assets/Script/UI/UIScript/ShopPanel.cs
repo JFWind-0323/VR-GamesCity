@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using OwnTool;
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.UI;
 
 public class ShopPanel : BasePanel
@@ -60,12 +62,15 @@ public class ShopPanel : BasePanel
             GameObject goodsBtn = Instantiate(goodsBtnPfb, parent);
             goodsBtn.name = name;
             Button btn = goodsBtn.GetComponent<Button>();
-            Image image = btn.image;
+            BtnController btnController = btn.AddComponent<BtnController>();
+            Image image = btn.transform.GetChild(1).GetComponent<Image>();
 
             string spritePath = spritePathBase + name;
             btn.onClick.AddListener(() => GetGoods(id));
             btn.onClick.AddListener(() => btn.enabled = false);
             btn.onClick.AddListener(() => SoundManager.Instance.PlaySoundEffect(SoundsGlobal.Click,2f));
+            btn.onClick.AddListener(() => btnController.BtnDisable());
+           
 
             image.sprite = Resources.Load<Sprite>(spritePath);
 
