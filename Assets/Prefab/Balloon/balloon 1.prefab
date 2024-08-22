@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8388903055170583071}
   - component: {fileID: 4622353688992576915}
   - component: {fileID: 2203165531530569326}
-  - component: {fileID: 4565135903293108169}
   - component: {fileID: 6020753335304486841}
   - component: {fileID: 4585539124753695973}
+  - component: {fileID: 3317806219332553440}
   m_Layer: 0
   m_Name: balloon 1
   m_TagString: Balloon
@@ -124,23 +124,6 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 1}
   speed: 0.35
   destroyDistance: 20
---- !u!114 &4565135903293108169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2227532205361350501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb0f241c3268f248a7fea862e7d35e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRadius: 5
-  ExplosionDamage: 0
-  ExplosionForce: 500
-  ExplosiveUpwardsModifier: 3
-  ShowExplosionRadius: 0
 --- !u!54 &6020753335304486841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -218,9 +201,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7ca34e52c6904ed4f9e50fed64b850f9, type: 2}
+        m_TargetAssemblyTypeName: BalloonScore, Assembly-CSharp
+        m_MethodName: sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDestroyed:
     m_PersistentCalls:
       m_Calls: []
   onRespawn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3317806219332553440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227532205361350501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb0f241c3268f248a7fea862e7d35e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRadius: 5
+  ExplosionDamage: 0
+  ExplosionForce: 500
+  ExplosiveUpwardsModifier: 3
+  ShowExplosionRadius: 0
