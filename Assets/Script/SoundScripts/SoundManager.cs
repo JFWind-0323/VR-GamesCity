@@ -1,26 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(AudioSource))] 
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : MonoSingle<SoundManager>
 {
-    public static SoundManager instance;
     AudioSource audio_source;
     Dictionary<string, AudioClip> audio_dic;
     void Awake()
     {
-        instance = this;
         audio_source = GetComponent<AudioSource>();
         audio_dic = new Dictionary<string, AudioClip>();
-        
     }
 
-    public AudioClip LoadAudioClip(string path)
+    AudioClip LoadAudioClip(string path)
     {
-        return (AudioClip)Resources.Load(path);
+        return Resources.Load<AudioClip>(path);
     }
 
-    private AudioClip GetAudioClip(string path)
+    AudioClip GetAudioClip(string path)
     {
         if (!audio_dic.ContainsKey(path))
         {
@@ -44,8 +42,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySoundEffect(string path, float volume = 0.5f)
     {
-        audio_source.PlayOneShot(GetAudioClip(path),volume);
-        
-        
+        Debug.Log(path);
+        audio_source.PlayOneShot(GetAudioClip(path), volume);
     }
 }

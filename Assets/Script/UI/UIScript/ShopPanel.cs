@@ -65,6 +65,7 @@ public class ShopPanel : BasePanel
             string spritePath = spritePathBase + name;
             btn.onClick.AddListener(() => GetGoods(id));
             btn.onClick.AddListener(() => btn.enabled = false);
+            btn.onClick.AddListener(() => SoundManager.Instance.PlaySoundEffect(SoundsGlobal.Click,2f));
 
             image.sprite = Resources.Load<Sprite>(spritePath);
 
@@ -112,7 +113,7 @@ public class ShopPanel : BasePanel
     public void GetGoods(int id)
     {
         Data.Instance.backPackData.goodsDicKvp.Add(new Kvp<int, string> { key = id, value = goodsPathDic[id] });
-        Debug.Log(goodsPathDic[id]);
+        //Debug.Log(goodsPathDic[id]);
     }
 
     public override void OnExit()
