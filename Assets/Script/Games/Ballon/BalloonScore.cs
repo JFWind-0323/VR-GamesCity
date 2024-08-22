@@ -18,6 +18,10 @@ public class BalloonScore: ScriptableObject
       Balloonscore ++;
     
     }
+    public void sound()
+    {
+        SoundManager.Instance.PlaySoundEffect(SoundsGlobal.BalloonBroken, 2f);
+    }
 
 
 }

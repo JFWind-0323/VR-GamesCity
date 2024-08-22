@@ -28,8 +28,8 @@ public class Blade : MonoBehaviour
     public int Combo =0;
     private void OnTriggerEnter(Collider other)
     {
-        
-        if(other.gameObject.CompareTag("Fruit"))
+       
+        if (other.gameObject.CompareTag("Fruit"))
         {
 
             GetPosition();
@@ -45,6 +45,9 @@ public class Blade : MonoBehaviour
         if(other.gameObject.CompareTag("Fruit"))
         {
             CutFruit(other.gameObject);
+            SoundManager.Instance.PlaySoundEffect(SoundsGlobal.CutFruit, 0.5f);
+            SoundManager.Instance.PlaySoundEffect(SoundsGlobal.Juice, 1f);
+           
         }
     }
 
@@ -63,6 +66,7 @@ public class Blade : MonoBehaviour
 
     void CutFruit(GameObject fruit)
     {
+       
         rightHandAnchor = GameObject.Find("RightHandAnchor").transform;
         Vector3 newPosition = rightHandAnchor.position;
 
@@ -72,6 +76,7 @@ public class Blade : MonoBehaviour
         Vector3 direction = newPosition - position; 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         slicedFruit.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
 
         // 遍历子物体并调整它们的位置
         foreach (Transform childTransform in childTransforms)

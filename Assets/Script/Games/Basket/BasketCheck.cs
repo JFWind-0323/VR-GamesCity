@@ -13,6 +13,7 @@ public class BasketCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Basketball"))
         {
+            SoundManager.Instance.PlaySoundEffect(SoundsGlobal.BasketHollow, 1f);
             int count = GetScoreForBasket();
             showScore.GetAndShowScore(count);
         }

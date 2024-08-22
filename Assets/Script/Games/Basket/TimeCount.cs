@@ -21,6 +21,7 @@ public class TimeCount : MonoBehaviour
    
     private void OnEnable()
     {
+        SoundManager.Instance.PlayBGM(SoundsGlobal.BGM);
         timeCounter = 60f;
          pos1 = basket1.transform.position;
          pos2 = basket2.transform.position;
@@ -33,6 +34,8 @@ public class TimeCount : MonoBehaviour
         timeCounter -= Time.deltaTime;
         if (timeCounter < 0)
         {
+            SoundManager.Instance.StopBGM();
+            SoundManager.Instance.PlaySoundEffect(SoundsGlobal.Win, 2f);
             gameObject.SetActive(false);
             basket1.transform.position = pos1;
             basket2.transform.position = pos2;
