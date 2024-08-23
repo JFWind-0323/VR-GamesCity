@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 2945119183215972434}
   - component: {fileID: 9211772891691657420}
   - component: {fileID: 976467144405810007}
-  - component: {fileID: 7481647241122007909}
+  - component: {fileID: 5834488019056762513}
   m_Layer: 5
   m_Name: Selections
   m_TagString: Untagged
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7481647241122007909
+--- !u!114 &5834488019056762513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -611,8 +611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -686.37085}
-  m_SizeDelta: {x: 0, y: 1372.7417}
+  m_AnchoredPosition: {x: 0, y: -527.95447}
+  m_SizeDelta: {x: 0, y: 1055.9084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4798995443800222129
 CanvasRenderer:
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 76
     m_Right: 0
-    m_Top: 45
+    m_Top: 160
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
@@ -711,8 +711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -673.5747}
-  m_SizeDelta: {x: 0, y: 1347.1482}
+  m_AnchoredPosition: {x: 0, y: -520.84924}
+  m_SizeDelta: {x: 0, y: 1041.6982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5458551524255800592
 CanvasRenderer:
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 87
     m_Right: 0
-    m_Top: 45
+    m_Top: 160
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0

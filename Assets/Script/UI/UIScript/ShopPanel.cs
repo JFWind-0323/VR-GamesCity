@@ -62,13 +62,15 @@ public class ShopPanel : BasePanel
             GameObject goodsBtn = Instantiate(goodsBtnPfb, parent);
             goodsBtn.name = name;
             Button btn = goodsBtn.GetComponent<Button>();
-            BtnController btnController = btn.AddComponent<BtnController>();
+            ButtonController btnController = btn.AddComponent<ButtonController>();
             Image image = btn.transform.GetChild(1).GetComponent<Image>();
 
             string spritePath = spritePathBase + name;
+
             btn.onClick.AddListener(() => GetGoods(id));
             btn.onClick.AddListener(() => btn.enabled = false);
             btn.onClick.AddListener(() => SoundManager.Instance.PlaySoundEffect(SoundsGlobal.Click,2f));
+            btnController.typeID = typeID;
             btn.onClick.AddListener(() => btnController.BtnDisable());
            
 
@@ -78,10 +80,12 @@ public class ShopPanel : BasePanel
             {
                 case 0:
                     uiSkinDic.Add(goodsBtn, new GoodsInfo(id, name, price, GoodsType.UISkin));
+                    image.rectTransform.sizeDelta = new Vector2(600, 200);
                     break;
                 case 1:
 
                     selectionDic.Add(goodsBtn, new GoodsInfo(id, name, price, GoodsType.Selection));
+                    image.rectTransform.sizeDelta = new Vector2(250, 250);
                     break;
                 default:
                     goodsBtn = null;
