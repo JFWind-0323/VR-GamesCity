@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.080383986, g: 0.099779494, b: 0.30118838, a: 1}
+  m_IndirectSpecularColor: {r: 0.31290758, g: 0.29355428, b: 0.5139878, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,8 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: dedefa574b5952548a98848a2980e638,
-    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: dedefa574b5952548a98848a2980e638, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -132,58 +131,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2104152926779154648, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2104152926779154648, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_Name
-      value: GameObject
+      value: GameCity
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 42.8
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 40.3
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e,
-        type: 3}
+    - target: {fileID: 2657120518082711325, guid: 20fda302168f06044bcb3a9f2474c78e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}

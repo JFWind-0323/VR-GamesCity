@@ -12266,6 +12266,9 @@ MonoBehaviour:
   basket1: {fileID: 1057833697}
   basket2: {fileID: 1057833698}
   basket3: {fileID: 1057833699}
+  basket11: {fileID: 0}
+  basket22: {fileID: 0}
+  basket33: {fileID: 0}
   speed: 5.5
 --- !u!114 &1587590912
 MonoBehaviour:
@@ -15617,33 +15620,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 219804227014765323, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: JumpAction
-      value: 
-      objectReference: {fileID: 3598031526004978682, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
-    - target: {fileID: 219804227014765323, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: MoveAction
-      value: 
-      objectReference: {fileID: 6972639530819350904, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
-    - target: {fileID: 219804227014765323, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: SprintAction
-      value: 
-      objectReference: {fileID: -9014867403852775025, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
-    - target: {fileID: 1562708395301746869, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: m_TargetDisplay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562708395301746869, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1562708395327926369, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
       propertyPath: m_Name
       value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562708395327926369, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1562708395327926371, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15685,30 +15664,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4892217724688207862, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892217725724954855, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: InputSource
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6900539701003393429, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: CameraLookAction
-      value: 
-      objectReference: {fileID: 3400255892409606642, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
-    - target: {fileID: 6900539701003393429, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: LockCameraAction
-      value: 
-      objectReference: {fileID: 7248157346319567513, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
-    - target: {fileID: 6900539701003393429, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: EmulatorActionSet
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
-    - target: {fileID: 7259437672335033820, guid: d207732f7296cfb40aa95002899c03c2, type: 3}
-      propertyPath: LocomotionToggleAction
-      value: 
-      objectReference: {fileID: 3512515067727415170, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
