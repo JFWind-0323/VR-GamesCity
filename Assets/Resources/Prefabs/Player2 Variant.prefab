@@ -12,10 +12,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 966512732591709781, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: CameraLookAction
+      value: 
+      objectReference: {fileID: 3400255892409606642, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
+    - target: {fileID: 966512732591709781, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: LockCameraAction
+      value: 
+      objectReference: {fileID: 7248157346319567513, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
+    - target: {fileID: 966512732591709781, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: EmulatorActionSet
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: ee166fdb2b3df2c4ebab8884f78ebb75, type: 3}
     - target: {fileID: 1247141269419349799, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: actionSet
       value: 
       objectReference: {fileID: -944628639613478452, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
+    - target: {fileID: 1247141269419349799, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: InputSource
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1654835181286922616, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: GroundedLayers.m_Bits
       value: 1
@@ -28,17 +44,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f4d1c14f9d7087643856f2c5965d05f7, type: 2}
+    - target: {fileID: 3896931306353885724, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: LocomotionToggleAction
+      value: 
+      objectReference: {fileID: 3512515067727415170, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
+    - target: {fileID: 5117709272728731509, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5117709272728731509, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117709272728731509, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5117709272763234209, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_Name
       value: Player2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117709272763234209, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117709272763234211, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_LocalScale.x
@@ -54,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5117709272763234211, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.35
+      value: -4.32
       objectReference: {fileID: 0}
     - target: {fileID: 5117709272763234211, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_LocalPosition.y
@@ -96,6 +124,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5883667856760302795, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: JumpAction
+      value: 
+      objectReference: {fileID: 3598031526004978682, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
+    - target: {fileID: 5883667856760302795, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: MoveAction
+      value: 
+      objectReference: {fileID: 6972639530819350904, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
+    - target: {fileID: 5883667856760302795, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: SprintAction
+      value: 
+      objectReference: {fileID: -9014867403852775025, guid: 69ce0998267c4b04a9ac2407b3bdbd0a, type: 3}
     - target: {fileID: 6552592445350430801, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: CollisionLayers.m_Bits
       value: 3
